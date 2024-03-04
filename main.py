@@ -75,7 +75,7 @@ def main():
     else:
 
         data_dir = os.path.join('C:\\', 'Users', 'rausc', 'Documents', 'EMBL', 'data', 'big_data_small')
-        project_name = 'big_data_small-1'
+        project_name = 'big_data_small-test-1'
         train_continue = 'off'
         load_epoch = 1
 
@@ -106,8 +106,8 @@ def main():
     data_dict['num_freq_disp'] = 50
     data_dict['num_freq_save'] = 1
 
-    data_dict['train_continue'] = 'off'
-    data_dict['load_epoch'] = 1
+    data_dict['train_continue'] = train_continue
+    data_dict['load_epoch'] = load_epoch
 
 
     TRAINER = Trainer(data_dict)
