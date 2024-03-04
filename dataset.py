@@ -160,6 +160,44 @@ class PPSDataset(torch.utils.data.Dataset):
 
 
 
+class PPSDataset2(torch.utils.data.Dataset):
+    def __init__(self, root_folder_path, transform=None):
+        self.root_folder_path = root_folder_path
+        self.transform = transform
+        self.preloaded_data = {}  # To store preloaded data
+        self.slices = self.preload_and_make_slices(root_folder_path)
+
+    def preload_and_make_slices(self, root_folder_path):
+        slices = []
+        for subdir, _, files in os.walk(root_folder_path):
+            sorted_files = sorted([f for f in files if f.lower().endswith('.tiff')])
+            for f in sorted_files:
+                full_path = os.path.join(subdir, f)
+                volume = tifffile.imread(full_path)
+                self.preloaded_data[full_path] = volume  # Preload data here
+                num_slices = volume.shape[0]
+                if num_slices >= 4:  # Ensure at least 4 slices to form a stack
+                    for i in range(num_slices - 3):  # Adjust for continuous slices
+                        input_slices_indices = [i, i+1, i+2, i+3]
+                        slices.append((full_path, input_slices_indices))
+        return slices
+
+    def __len__(self):
+        return len(self.slices)
+
+    def __getitem__(self, index):
+        file_path, input_slice_indices = self.slices[index]
+        
+        # Access preloaded data instead of reading from file
+        volume = self.preloaded_data[file_path]
+        input_slices = np.stack([volume[i] for i in input_slice_indices], axis=-1)
+
+        if self.transform:
+            input_slices = self.transform(input_slices)
+
+        return input_slices
+
+
 
 class N2NInferenceDataset(torch.utils.data.Dataset):
     def __init__(self, root_folder_path, transform=None, mean=None, std=None):

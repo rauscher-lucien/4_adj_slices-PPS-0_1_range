@@ -94,14 +94,14 @@ class Trainer:
 
         ### make dataset and loader ###
 
-        dataset_train = PPSDataset(root_folder_path=self.data_dir, 
+        dataset_train = PPSDataset2(root_folder_path=self.data_dir, 
                                     transform=transform_train)
 
         loader_train = torch.utils.data.DataLoader(
             dataset_train,
             batch_size=self.batch_size,
             shuffle=True,
-            num_workers=0)
+            num_workers=4)
 
         num_train = len(dataset_train)
         num_batch_train = int((num_train / self.batch_size) + ((num_train % self.batch_size) != 0))

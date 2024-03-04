@@ -120,3 +120,43 @@
 2024-03-04 16:32:43 - ERROR -   File "C:\Users\rausc\AppData\Local\Programs\Python\Python310\lib\threading.py", line 320, in wait
 2024-03-04 16:32:43 - ERROR - waiter.acquire()
 2024-03-04 16:32:43 - ERROR - KeyboardInterrupt
+2024-03-04 17:01:31 - INFO - Not running on server, using default data directory: C:\Users\rausc\Documents\EMBL\data\big_data_small
+2024-03-04 17:01:31 - INFO - Default project name: big_data_small-test-1
+2024-03-04 17:01:31 - INFO - GPU is not available
+2024-03-04 17:01:31 - INFO - C:\Users\rausc\Documents\EMBL\data\big_data_small
+2024-03-04 17:01:33 - INFO - Global min and max parameters saved to C:\Users\rausc\Documents\EMBL\data\big_data_small\min_max_params.pkl
+2024-03-04 17:01:33 - INFO - Execution time: 2.6929733753204346 seconds
+2024-03-04 17:01:52 - INFO - TRAIN: EPOCH 1: BATCH 0001/0309: LOSS: 0.4789
+2024-03-04 17:01:52 - INFO - TRAIN: EPOCH 1: BATCH 0002/0309: LOSS: 0.4855
+2024-03-04 17:01:52 - INFO - TRAIN: EPOCH 1: BATCH 0003/0309: LOSS: 0.4245
+2024-03-04 17:01:53 - INFO - TRAIN: EPOCH 1: BATCH 0004/0309: LOSS: 0.4629
+2024-03-04 17:01:53 - INFO - TRAIN: EPOCH 1: BATCH 0005/0309: LOSS: 0.3682
+2024-03-04 17:01:53 - INFO - TRAIN: EPOCH 1: BATCH 0006/0309: LOSS: 0.4028
+2024-03-04 17:01:54 - INFO - TRAIN: EPOCH 1: BATCH 0007/0309: LOSS: 0.3250
+2024-03-04 17:01:54 - INFO - TRAIN: EPOCH 1: BATCH 0008/0309: LOSS: 0.3522
+2024-03-04 17:01:54 - INFO - TRAIN: EPOCH 1: BATCH 0009/0309: LOSS: 0.3578
+2024-03-04 17:01:55 - INFO - TRAIN: EPOCH 1: BATCH 0010/0309: LOSS: 0.4162
+2024-03-04 17:01:55 - INFO - TRAIN: EPOCH 1: BATCH 0011/0309: LOSS: 0.2704
+2024-03-04 17:01:55 - INFO - TRAIN: EPOCH 1: BATCH 0012/0309: LOSS: 0.2485
+2024-03-04 17:01:56 - INFO - TRAIN: EPOCH 1: BATCH 0013/0309: LOSS: 0.2862
+2024-03-04 17:01:56 - INFO - TRAIN: EPOCH 1: BATCH 0014/0309: LOSS: 0.3042
+2024-03-04 17:01:57 - INFO - TRAIN: EPOCH 1: BATCH 0015/0309: LOSS: 0.2710
+2024-03-04 17:01:57 - INFO - TRAIN: EPOCH 1: BATCH 0016/0309: LOSS: 0.1687
+2024-03-04 17:01:58 - INFO - TRAIN: EPOCH 1: BATCH 0017/0309: LOSS: 0.2632
+2024-03-04 17:01:58 - INFO - TRAIN: EPOCH 1: BATCH 0018/0309: LOSS: 0.2909
+2024-03-04 17:01:58 - INFO - TRAIN: EPOCH 1: BATCH 0019/0309: LOSS: 0.3426
+2024-03-04 17:01:59 - INFO - TRAIN: EPOCH 1: BATCH 0020/0309: LOSS: 0.2596
+2024-03-04 17:01:59 - INFO - TRAIN: EPOCH 1: BATCH 0021/0309: LOSS: 0.2768
+2024-03-04 17:02:00 - INFO - TRAIN: EPOCH 1: BATCH 0022/0309: LOSS: 0.1455
+2024-03-04 17:02:01 - ERROR - Traceback (most recent call last):
+2024-03-04 17:02:01 - ERROR -   File "c:\Users\rausc\Documents\EMBL\code\4_adj_slices-PPS-0_1_range\main.py", line 113, in <module>
+2024-03-04 17:02:01 - ERROR - main()
+2024-03-04 17:02:01 - ERROR -   File "c:\Users\rausc\Documents\EMBL\code\4_adj_slices-PPS-0_1_range\main.py", line 109, in main
+2024-03-04 17:02:01 - ERROR - TRAINER.train()
+2024-03-04 17:02:01 - ERROR -   File "c:\Users\rausc\Documents\EMBL\code\4_adj_slices-PPS-0_1_range\train.py", line 156, in train
+2024-03-04 17:02:01 - ERROR - loss.backward()
+2024-03-04 17:02:01 - ERROR -   File "C:\Users\rausc\AppData\Local\Programs\Python\Python310\lib\site-packages\torch\_tensor.py", line 492, in backward
+2024-03-04 17:02:01 - ERROR - torch.autograd.backward(
+2024-03-04 17:02:01 - ERROR -   File "C:\Users\rausc\AppData\Local\Programs\Python\Python310\lib\site-packages\torch\autograd\__init__.py", line 251, in backward
+2024-03-04 17:02:01 - ERROR - Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+2024-03-04 17:02:01 - ERROR - KeyboardInterrupt
