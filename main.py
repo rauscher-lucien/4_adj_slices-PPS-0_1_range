@@ -68,6 +68,8 @@ def main():
         project_name = args.project_name 
         train_continue = args.train_continue
         load_epoch = args.load_epoch
+        project_dir = os.path.join('/g', 'prevedel', 'members', 'Rauscher', 'projects', '4_adj_slices-PPS-0_1_range')
+
         print(f"Using data directory: {data_dir}")
         print(f"Project name: {project_name}")
         print(f"Train continue: {train_continue}")
@@ -78,17 +80,10 @@ def main():
         project_name = 'big_data_small-test-1'
         train_continue = 'off'
         load_epoch = 1
+        project_dir = os.path.join('C:\\', 'Users', 'rausc', 'Documents', 'EMBL', 'projects', '4_adj_slices-PPS-0_1_range')
 
         print(f"Not running on server, using default data directory: {data_dir}")
         print(f"Default project name: {project_name}")
-
-
-
-    ### things to modify depending on your folder structure
-
-    local_project_path = os.path.join('C:\\', 'Users', 'rausc', 'Documents', 'EMBL', 'projects', '4_adj_slices-PPS-0_1_range')
-    remote_project_path = os.path.join('/g', 'prevedel', 'members', 'Rauscher', 'projects', '4_adj_slices-PPS-0_1_range')
-    project_dir = get_file_path(local_path=local_project_path, remote_path=remote_project_path)
 
 
     results_dir, checkpoints_dir = create_result_dir(project_dir, project_name)
