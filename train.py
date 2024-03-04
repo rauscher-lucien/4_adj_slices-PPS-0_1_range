@@ -135,7 +135,7 @@ class Trainer:
                     return freq > 0 and (batch % freq == 0 or batch == num_batch_train)
 
                 
-                input_stack_2x2, target_stack_2x2, input_stack_4x4, target_stack_4x4 = data
+                input_stack_2x2, target_stack_2x2, input_stack_4x4, target_stack_4x4 = data.to(self.device)
 
                 output_stack_2x2 = model(input_stack_2x2)
                 output_stack_4x4 = model(input_stack_4x4)

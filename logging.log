@@ -79,3 +79,44 @@
 2024-03-04 16:25:18 - ERROR -   File "C:\Users\rausc\AppData\Local\Programs\Python\Python310\lib\threading.py", line 320, in wait
 2024-03-04 16:25:18 - ERROR - waiter.acquire()
 2024-03-04 16:25:18 - ERROR - KeyboardInterrupt
+2024-03-04 16:32:22 - INFO - Not running on server, using default data directory: C:\Users\rausc\Documents\EMBL\data\big_data_small
+2024-03-04 16:32:22 - INFO - Default project name: big_data_small-test-1
+2024-03-04 16:32:22 - INFO - GPU is not available
+2024-03-04 16:32:22 - INFO - C:\Users\rausc\Documents\EMBL\data\big_data_small
+2024-03-04 16:32:25 - INFO - Global min and max parameters saved to C:\Users\rausc\Documents\EMBL\data\big_data_small\min_max_params.pkl
+2024-03-04 16:32:30 - INFO - Global mean and std parameters saved to C:\Users\rausc\Documents\EMBL\data\big_data_small\normalization_params.pkl
+2024-03-04 16:32:30 - INFO - Execution time: 7.392539024353027 seconds
+2024-03-04 16:32:37 - INFO - TRAIN: EPOCH 1: BATCH 0001/0309: LOSS: 0.4958
+2024-03-04 16:32:42 - INFO - TRAIN: EPOCH 1: BATCH 0002/0309: LOSS: 0.5288
+2024-03-04 16:32:43 - ERROR - Traceback (most recent call last):
+2024-03-04 16:32:43 - ERROR -   File "c:\Users\rausc\Documents\EMBL\code\4_adj_slices-PPS-0_1_range\main.py", line 113, in <module>
+2024-03-04 16:32:43 - ERROR - main()
+2024-03-04 16:32:43 - ERROR -   File "c:\Users\rausc\Documents\EMBL\code\4_adj_slices-PPS-0_1_range\main.py", line 109, in main
+2024-03-04 16:32:43 - ERROR - TRAINER.train()
+2024-03-04 16:32:43 - ERROR -   File "c:\Users\rausc\Documents\EMBL\code\4_adj_slices-PPS-0_1_range\train.py", line 132, in train
+2024-03-04 16:32:43 - ERROR - for batch, data in enumerate(loader_train, 1):
+2024-03-04 16:32:43 - ERROR -   File "C:\Users\rausc\AppData\Local\Programs\Python\Python310\lib\site-packages\torch\utils\data\dataloader.py", line 630, in __next__
+2024-03-04 16:32:43 - ERROR - data = self._next_data()
+2024-03-04 16:32:43 - ERROR -   File "C:\Users\rausc\AppData\Local\Programs\Python\Python310\lib\site-packages\torch\utils\data\dataloader.py", line 674, in _next_data
+2024-03-04 16:32:43 - ERROR - data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+2024-03-04 16:32:43 - ERROR -   File "C:\Users\rausc\AppData\Local\Programs\Python\Python310\lib\site-packages\torch\utils\data\_utils\fetch.py", line 51, in fetch
+2024-03-04 16:32:43 - ERROR - data = [self.dataset[idx] for idx in possibly_batched_index]
+2024-03-04 16:32:43 - ERROR -   File "C:\Users\rausc\AppData\Local\Programs\Python\Python310\lib\site-packages\torch\utils\data\_utils\fetch.py", line 51, in <listcomp>
+2024-03-04 16:32:43 - ERROR - data = [self.dataset[idx] for idx in possibly_batched_index]
+2024-03-04 16:32:43 - ERROR -   File "c:\Users\rausc\Documents\EMBL\code\4_adj_slices-PPS-0_1_range\dataset.py", line 153, in __getitem__
+2024-03-04 16:32:43 - ERROR - volume = tifffile.imread(file_path)
+2024-03-04 16:32:43 - ERROR -   File "C:\Users\rausc\AppData\Local\Programs\Python\Python310\lib\site-packages\tifffile\tifffile.py", line 1106, in imread
+2024-03-04 16:32:43 - ERROR - return tif.asarray(
+2024-03-04 16:32:43 - ERROR -   File "C:\Users\rausc\AppData\Local\Programs\Python\Python310\lib\site-packages\tifffile\tifffile.py", line 4348, in asarray
+2024-03-04 16:32:43 - ERROR - result = stack_pages(
+2024-03-04 16:32:43 - ERROR -   File "C:\Users\rausc\AppData\Local\Programs\Python\Python310\lib\site-packages\tifffile\tifffile.py", line 22611, in stack_pages
+2024-03-04 16:32:43 - ERROR - for _ in executor.map(func, pages, range(npages)):
+2024-03-04 16:32:43 - ERROR -   File "C:\Users\rausc\AppData\Local\Programs\Python\Python310\lib\concurrent\futures\_base.py", line 621, in result_iterator
+2024-03-04 16:32:43 - ERROR - yield _result_or_cancel(fs.pop())
+2024-03-04 16:32:43 - ERROR -   File "C:\Users\rausc\AppData\Local\Programs\Python\Python310\lib\concurrent\futures\_base.py", line 319, in _result_or_cancel
+2024-03-04 16:32:43 - ERROR - return fut.result(timeout)
+2024-03-04 16:32:43 - ERROR -   File "C:\Users\rausc\AppData\Local\Programs\Python\Python310\lib\concurrent\futures\_base.py", line 453, in result
+2024-03-04 16:32:43 - ERROR - self._condition.wait(timeout)
+2024-03-04 16:32:43 - ERROR -   File "C:\Users\rausc\AppData\Local\Programs\Python\Python310\lib\threading.py", line 320, in wait
+2024-03-04 16:32:43 - ERROR - waiter.acquire()
+2024-03-04 16:32:43 - ERROR - KeyboardInterrupt
