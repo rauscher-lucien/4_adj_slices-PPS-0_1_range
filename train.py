@@ -73,7 +73,7 @@ class Trainer:
         print(self.data_dir)
         start_time = time.time()
         min, max = compute_global_min_max_and_save(self.data_dir)
-        mean, std = compute_global_mean_and_std(self.data_dir)
+        # mean, std = compute_global_mean_and_std(self.data_dir)
         end_time = time.time()
         execution_time = end_time - start_time
         print(f"Execution time: {execution_time} seconds")
@@ -135,7 +135,7 @@ class Trainer:
                     return freq > 0 and (batch % freq == 0 or batch == num_batch_train)
 
                 
-                input_stack_2x2, target_stack_2x2, input_stack_4x4, target_stack_4x4 = data.to(self.device)
+                input_stack_2x2, target_stack_2x2, input_stack_4x4, target_stack_4x4 = data
 
                 input_stack_2x2 = input_stack_2x2.to(self.device)
                 target_stack_2x2 = target_stack_2x2.to(self.device)
