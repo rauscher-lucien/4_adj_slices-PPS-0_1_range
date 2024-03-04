@@ -3,7 +3,6 @@ import os
 import sys
 from skimage import filters, exposure
 import matplotlib.pyplot as plt
-from PIL import Image
 import torch
 
 class Normalize(object):

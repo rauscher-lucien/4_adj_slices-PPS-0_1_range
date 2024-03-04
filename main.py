@@ -53,17 +53,34 @@ def main():
         # Set up argument parsing
         parser = argparse.ArgumentParser(description='Process data directory.')
         parser.add_argument('--data_dir', type=str, help='Path to the data directory')
+        parser.add_argument('--project_name', type=str, help='Name of the project')
+        parser.add_argument('--train_continue', type=str, default='off', choices=['on', 'off'],
+                            help='Flag to continue training: "on" or "off" (default: "off")')
+        parser.add_argument('--load_epoch', type=int, default=1, 
+                            help='Epoch number from which to continue training (default: 1)')
+    
 
         # Parse arguments
         args = parser.parse_args()
 
         # Now you can use args.data_dir as the path to your data
         data_dir = args.data_dir
+        project_name = args.project_name 
+        train_continue = args.train_continue
+        load_epoch = args.load_epoch
         print(f"Using data directory: {data_dir}")
+        print(f"Project name: {project_name}")
+        print(f"Train continue: {train_continue}")
+        print(f"Load epoch: {load_epoch}")
     else:
-        # If not running on the server, perhaps use a default data_dir or handle differently
+
         data_dir = os.path.join('C:\\', 'Users', 'rausc', 'Documents', 'EMBL', 'data', 'big_data_small')
+        project_name = 'big_data_small-1'
+        train_continue = 'off'
+        load_epoch = 1
+
         print(f"Not running on server, using default data directory: {data_dir}")
+        print(f"Default project name: {project_name}")
 
 
 
@@ -74,9 +91,7 @@ def main():
     project_dir = get_file_path(local_path=local_project_path, remote_path=remote_project_path)
 
 
-    name = 'big_data_small-1'
-
-    results_dir, checkpoints_dir = create_result_dir(project_dir, name)
+    results_dir, checkpoints_dir = create_result_dir(project_dir, project_name)
 
     data_dict = {}
 
@@ -91,7 +106,7 @@ def main():
     data_dict['num_freq_disp'] = 50
     data_dict['num_freq_save'] = 1
 
-    data_dict['train_continue'] = 'on'
+    data_dict['train_continue'] = 'off'
     data_dict['load_epoch'] = 1
 
 
